@@ -1,6 +1,6 @@
 #include <iostream>
 // #include <cstdlib>
-// #include <time.h>
+#include <time.h>
 using namespace std;
 
 int partition(int arr[] , int low , int high)
@@ -23,10 +23,10 @@ int partition(int arr[] , int low , int high)
 
 int r_partition(int arr[] , int low , int high)
 {
-    // srand(time(NULL));
+    srand(time(NULL));
     int random = low + rand() % (high - low);
 
-    swap(arr[high] , arr[random]);
+    swap(arr[low] , arr[random]);
 
     return partition(arr , low , high);
 }
